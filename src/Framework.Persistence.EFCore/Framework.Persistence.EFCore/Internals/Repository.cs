@@ -7,9 +7,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Framework.Persistence.EFCore.SqlServer.Internals;
+namespace Framework.Persistence.EFCore.Internals;
 
-internal class Repository<TEnity,TId> : IRepository<TEnity,TId> where TEnity : class
+public class Repository<TEnity, TId> : IRepository<TEnity, TId> where TEnity : class
 {
     private readonly DbContext _dbContext;
     private readonly DbSet<TEnity> _dbSet;
@@ -40,7 +40,7 @@ internal class Repository<TEnity,TId> : IRepository<TEnity,TId> where TEnity : c
     {
         var rowAffected = await _dbSet.DeleteByKeyAsync(cancellationToken, id);
         return rowAffected;
-        
+
     }
 
     public async Task<int> DeleteRangeAsync(IReadOnlyList<TEnity> entities, CancellationToken cancellationToken = default)
@@ -51,12 +51,12 @@ internal class Repository<TEnity,TId> : IRepository<TEnity,TId> where TEnity : c
 
     public void Dispose()
     {
-       
+
     }
 
     public async Task<IReadOnlyList<TEnity>> FindAsync(Expression<Func<TEnity, bool>> predicate, CancellationToken cancellationToken = default)
     {
-       return await _dbSet.AsNoTracking().Where(predicate).ToListAsync(cancellationToken);
+        return await _dbSet.AsNoTracking().Where(predicate).ToListAsync(cancellationToken);
     }
 
     public async Task<TEnity?> FindByIdAsync(TId id, CancellationToken cancellationToken = default)
@@ -79,7 +79,13 @@ internal class Repository<TEnity,TId> : IRepository<TEnity,TId> where TEnity : c
 
     public async Task UpdateAsync(TEnity entity, CancellationToken cancellationToken = default)
     {
-         await _dbSet.SingleUpdateAsync(entity, cancellationToken);
+        await _dbSet.SingleUpdateAsync(entity, cancellationToken);
     }
 }
 
+public class Repository<TEnity> : Repository<TEnity, long>, IRepository<TEnity> where TEnity : class
+{
+    public Repository(DbContext dbContext) : base(dbContext)
+    {
+    }
+}

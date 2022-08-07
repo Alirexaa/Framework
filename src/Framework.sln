@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32714.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Abstraction.Persistence", "Framework.Abstraction.Persistence\Framework.Abstraction.Persistence\Framework.Abstraction.Persistence.csproj", "{351984EF-3C9F-4C7C-9D59-5F01B763589E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Abstraction.Persistence", "Framework.Abstraction.Persistence\Framework.Abstraction.Persistence\Framework.Abstraction.Persistence.csproj", "{351984EF-3C9F-4C7C-9D59-5F01B763589E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Persistence.EFCore.SqlServer", "Framework.Persistence.EFCore.SqlServer\Framework.Persistence.EFCore.SqlServer\Framework.Persistence.EFCore.SqlServer.csproj", "{672D0DAC-FEB5-463D-B909-37143CB874EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Persistence.EFCore.SqlServer", "Framework.Persistence.EFCore.SqlServer\Framework.Persistence.EFCore.SqlServer\Framework.Persistence.EFCore.SqlServer.csproj", "{672D0DAC-FEB5-463D-B909-37143CB874EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Persistence.EFCore", "Framework.Persistence.EFCore\Framework.Persistence.EFCore\Framework.Persistence.EFCore.csproj", "{4AD34FE4-1940-424F-8559-D76C7441CF26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Persistence.EFCore.Postgres", "Framework.Persistence.EFCore.Postgres\Framework.Persistence.EFCore.Postgres\Framework.Persistence.EFCore.Postgres.csproj", "{38B968DB-122F-4F52-992F-8B09055B3C6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{672D0DAC-FEB5-463D-B909-37143CB874EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{672D0DAC-FEB5-463D-B909-37143CB874EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{672D0DAC-FEB5-463D-B909-37143CB874EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD34FE4-1940-424F-8559-D76C7441CF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD34FE4-1940-424F-8559-D76C7441CF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD34FE4-1940-424F-8559-D76C7441CF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD34FE4-1940-424F-8559-D76C7441CF26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B968DB-122F-4F52-992F-8B09055B3C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B968DB-122F-4F52-992F-8B09055B3C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B968DB-122F-4F52-992F-8B09055B3C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B968DB-122F-4F52-992F-8B09055B3C6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

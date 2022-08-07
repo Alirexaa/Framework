@@ -2,10 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Framework.Persistence.EFCore.SqlServer.Internals
+namespace Framework.Persistence.EFCore.Internals
 {
-    internal class UnitOfWork<TApplicationDbContext> : IUnitOfWork  where TApplicationDbContext : DbContext
+    public class UnitOfWork<TApplicationDbContext> : IUnitOfWork<TApplicationDbContext> ,IUnitOfWork where TApplicationDbContext : DbContext
     {
+        public TApplicationDbContext Context => _context;
         private readonly TApplicationDbContext _context;
         //private readonly IDbContextTransaction _dbContextTransaction;
         public UnitOfWork(TApplicationDbContext context)

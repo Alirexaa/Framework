@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,13 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.7" />
+	 <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="6.14.3" />
+
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Framework.Abstraction.Persistence\Framework.Abstraction.Persistence\Framework.Abstraction.Persistence.csproj" />
-    <ProjectReference Include="..\..\Framework.Persistence.EFCore\Framework.Persistence.EFCore\Framework.Persistence.EFCore.csproj" />
   </ItemGroup>
 
 </Project>
